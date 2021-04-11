@@ -1,5 +1,6 @@
 #:include content_navigation_drawer.kv
 #:include item_drawer.kv
+#:include list_item_with_checkbox.kv
 
 Screen:
 
@@ -19,12 +20,20 @@ Screen:
             Screen:
                 name: "home"
 
-                BoxLayout:
-                    orientation: 'vertical'
+                StackLayout:
+                    y: -toolbar.height
 
-                    MDLabel:
-                        text: "Home"
-                        halign: "center"
+                    ListItemWithCheckbox:
+                        text: "Task 1"
+                        secondary_text: "Today"
+
+                    ListItemWithCheckbox:
+                        text: "Task 2"
+                        secondary_text: "Today"
+
+                    ListItemWithCheckbox:
+                        text: "Task 3"
+                        secondary_text: "2 days ago"
 
             Screen:
                 name: "settings"

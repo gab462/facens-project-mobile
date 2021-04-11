@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivymd.app import MDApp
-from nav import ContentNavigationDrawer
-
+from nav import *
+from list_items import *
 
 class App(MDApp):
     def build(self):
