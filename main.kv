@@ -12,6 +12,14 @@ Screen:
         left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
         right_action_items: [['bell', lambda x: print("bell")], ['share-variant', lambda x: print("share-variant")], ['magnify', lambda x: print("magnify")]]
 
+    MDBottomAppBar:
+        MDToolbar:
+            type: "bottom"
+            mode: "free-end"
+            icon: "pencil"
+            left_action_items: [["eye", lambda x: print("eye")]]
+            right_action_items: [["filter", lambda x: print("filter")]]
+
     NavigationLayout:
         x: toolbar.height
 
