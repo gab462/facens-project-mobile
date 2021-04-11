@@ -1,10 +1,11 @@
+from kivy.lang import Builder
 from kivymd.app import MDApp
-from kivymd.uix.label import MDLabel
+from nav import ContentNavigationDrawer
 
 
 class App(MDApp):
     def build(self):
-        return MDLabel(text="Hello, World", halign="center")
+        return Builder.load_file('nav.kv')
 
 
 App().run()
