@@ -3,11 +3,14 @@ from kivymd.uix.list import OneLineIconListItem, MDList
 from kivy.properties import StringProperty
 from kivymd.theming import ThemableBehavior
 
+
 class ContentNavigationDrawer(BoxLayout):
     pass
 
+
 class ItemDrawer(OneLineIconListItem):
     icon = StringProperty()
+
 
 class DrawerList(ThemableBehavior, MDList):
     def set_color_item(self, instance_item):

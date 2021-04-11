@@ -10,5 +10,4 @@ class App(MDApp):
         return Builder.load_file('main.kv')
 
 
-
 App().run()
