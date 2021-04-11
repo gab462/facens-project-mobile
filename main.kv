@@ -1,0 +1,44 @@
+#:include content_navigation_drawer.kv
+#:include item_drawer.kv
+
+Screen:
+
+    MDToolbar:
+        id: toolbar
+        pos_hint: {"top": 1}
+        title: "Agenda"
+        elevation: 10
+        left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
+
+    NavigationLayout:
+        x: toolbar.height
+
+        ScreenManager:
+            id: screen_manager
+
+            Screen:
+                name: "home"
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    MDLabel:
+                        text: "Home"
+                        halign: "center"
+
+            Screen:
+                name: "settings"
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    MDLabel:
+                        text: "Settings"
+                        halign: "center"
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            ContentNavigationDrawer:
+                screen_manager: screen_manager
+                nav_drawer: nav_drawer

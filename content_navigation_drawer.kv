@@ -1,0 +1,60 @@
+<ContentNavigationDrawer>:
+    orientation: "vertical"
+    padding: "8dp"
+    spacing: "8dp"
+
+    AnchorLayout:
+        anchor_x: "left"
+        size_hint_y: None
+        height: avatar.height
+
+        Image:
+            id: avatar
+            size_hint: None, None
+            size: "56dp", "56dp"
+            source: "kivymd.png"
+
+    MDLabel:
+        text: "User"
+        font_style: "Button"
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    ScrollView:
+
+        DrawerList:
+            id: md_list
+
+            ItemDrawer:
+                icon: "home"
+                text: "Home"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "home"
+
+            ItemDrawer:
+                icon: "check-circle"
+                text: "Completed"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "home"
+
+            ItemDrawer:
+                icon: "eye"
+                text: "All"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "home"
+
+            ItemDrawer:
+                icon: "settings"
+                text: "Settings"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "settings"
+
+            ItemDrawer:
+                icon: "exit-to-app"
+                text: "Exit"
+                on_press:
+                    root.nav_drawer.set_state("close")

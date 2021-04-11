@@ -5,7 +5,10 @@ from nav import ContentNavigationDrawer
 
 class App(MDApp):
     def build(self):
-        return Builder.load_file('nav.kv')
+        self.theme_cls.primary_palette = "DeepPurple"
+
+        return Builder.load_file('main.kv')
+
 
 
 App().run()
