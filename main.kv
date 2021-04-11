@@ -1,6 +1,6 @@
 #:include content_navigation_drawer.kv
 #:include item_drawer.kv
-#:include list_item_with_checkbox.kv
+#:include list_items.kv
 
 Screen:
 
@@ -20,7 +20,7 @@ Screen:
             Screen:
                 name: "home"
 
-                StackLayout:
+                MDStackLayout:
                     y: -toolbar.height
 
                     ListItemWithCheckbox:
@@ -38,12 +38,18 @@ Screen:
             Screen:
                 name: "settings"
 
-                BoxLayout:
-                    orientation: 'vertical'
+                MDStackLayout:
+                    y: -toolbar.height
 
-                    MDLabel:
-                        text: "Settings"
-                        halign: "center"
+                    ListItemWithToggle:
+                        text: "Notifications"
+                        secondary_text: "Get notified for deadlines"
+                        icon: "bell"
+
+                    ListItemWithToggle:
+                        text: "Location"
+                        secondary_text: "Attach location information"
+                        icon: "map-marker"
 
         MDNavigationDrawer:
             id: nav_drawer

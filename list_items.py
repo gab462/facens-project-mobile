@@ -1,5 +1,6 @@
-from kivymd.uix.list import TwoLineAvatarIconListItem, ILeftBodyTouch
-from kivymd.uix.selectioncontrol import MDCheckbox
+from kivymd.uix.list import TwoLineAvatarIconListItem, ILeftBodyTouch, IRightBodyTouch
+from kivymd.uix.selectioncontrol import MDCheckbox, MDSwitch
+from kivy.properties import StringProperty
 
 
 class ListItemWithCheckbox(TwoLineAvatarIconListItem):
@@ -7,4 +8,12 @@ class ListItemWithCheckbox(TwoLineAvatarIconListItem):
 
 
 class LeftCheckbox(ILeftBodyTouch, MDCheckbox):
+    pass
+
+
+class ListItemWithToggle(TwoLineAvatarIconListItem):
+    icon = StringProperty()
+
+
+class RightToggle(IRightBodyTouch, MDSwitch):
     pass
