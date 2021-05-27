@@ -15,8 +15,8 @@ of 2021). Gustavo Araujo Borges, RA 180995.
    #+begin_src sh
      pipenv install pipenv run python main.py
    #+end_src
-** Building for Android
-   TBD.
+** Android
+   Binary on Github Releases.
    - [[https://github.com/kivymd/KivyMD#how-to-use-with-buildozer][Documentation on deploying apk]]
 ** Building for IOS
    Out of scope but should be possible.
@@ -24,18 +24,9 @@ of 2021). Gustavo Araujo Borges, RA 180995.
      specific versions, as this project uses KivyMD instead of regular
      Kivy)
 
-* AC2 [1/5]
-** TODO Database
-   SQLite / Firebase / [[https://www.blog.pythonlibrary.org/2014/07/17/an-intro-to-peewee-another-python-orm/][peewee]]
-** TODO Distribution
-   Github Workflow for building APK
-** TODO Push Notifications
-   [[https://www.youtube.com/watch?v=8Jwp1PTvECI][plyer]] / jnius
-** TODO Login / Log out / Sign Up
-   SQLite / Firebase
-** DONE App Design
-   KivyMD
-
-* TODO Enhancements
-  - git flow
-  - CI/CD (building apk on master, linting on all branches)
+* AC2 [3/5]
+  - [X] App Design: KivyMD
+  - [X] Distribution: Github Workflow for building APK
+  - [X] Push Notifications: [[https://www.youtube.com/watch?v=8Jwp1PTvECI][plyer]]
+  - [ ] Database: SQLite / Firebase / [[https://www.blog.pythonlibrary.org/2014/07/17/an-intro-to-peewee-another-python-orm/][peewee]]
+  - [ ] Login / Log out / Sign Up: SQLite / Firebase
