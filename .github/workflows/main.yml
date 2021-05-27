@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CD
 
 # Controls when the action will run. 
 on:
@@ -34,11 +34,19 @@ jobs:
           workdir: .
           buildozer_version: stable
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: package
-          path: ${{ steps.buildozer.outputs.filename }}
+          files: ${{ steps.buildozer.outputs.filename }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            #      - name: Upload artifacts
+            #        uses: actions/upload-artifact@v2
+            #        id: upload-artifact
+            #        with:
+            #          name: package
+            #          path: ${{ steps.buildozer.outputs.filename }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
