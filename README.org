@@ -1,26 +1,41 @@
-Project for Mobile Apps Development class at UNIFACENS (1st semester of 2021). Gustavo Araujo Borges, RA 180995.
+Project for Mobile Apps Development class at UNIFACENS (1st semester
+of 2021). Gustavo Araujo Borges, RA 180995.
 
 - [[https://www.figma.com/file/oBq0zqlusKY4EOj4jauzF7/kivy-agenda?node-id=2%3A5814][Figma Wireframes Link]]
 
 * Building and running
 ** Requirements
-- Python 3.6+
-- ~pip~
-- ~pipenv~
-- Android SDK (Optional, only needed for building apk)
+   - Python 3.6+
+   - ~pip~
+   - ~pipenv~
+   - Android SDK (Optional, only needed for building apk)
 ** Running on desktop
-Dependencies are managed with pipenv. Therefore, you should be able to run the project as follows:
-#+begin_src sh
-  pipenv install
-  pipenv run python main.py
-#+end_src
+   Dependencies are managed with pipenv. Therefore, you should be able
+   to run the project as follows:
+   #+begin_src sh
+     pipenv install pipenv run python main.py
+   #+end_src
 ** Building for Android
-TBD.
-- [[https://github.com/kivymd/KivyMD#how-to-use-with-buildozer][Documentation on deploying apk]]
+   TBD.
+   - [[https://github.com/kivymd/KivyMD#how-to-use-with-buildozer][Documentation on deploying apk]]
 ** Building for IOS
-Out of scope but should be possible.
-- [[https://kivy.org/doc/stable/guide/packaging-ios.html][Documentation for building iOS packages]] (Packages should need specific versions, as this project uses KivyMD instead of regular Kivy)
+   Out of scope but should be possible.
+   - [[https://kivy.org/doc/stable/guide/packaging-ios.html][Documentation for building iOS packages]] (Packages should need
+     specific versions, as this project uses KivyMD instead of regular
+     Kivy)
+
+* AC2 [1/5]
+** TODO Database
+   SQLite / Firebase / [[https://www.blog.pythonlibrary.org/2014/07/17/an-intro-to-peewee-another-python-orm/][peewee]]
+** TODO Distribution
+   Github Workflow for building APK
+** TODO Push Notifications
+   [[https://www.youtube.com/watch?v=8Jwp1PTvECI][plyer]] / jnius
+** TODO Login / Log out / Sign Up
+   SQLite / Firebase
+** DONE App Design
+   KivyMD
 
 * TODO Enhancements
-- git flow
-- CI/CD (building apk on master, linting on all branches)
+  - git flow
+  - CI/CD (building apk on master, linting on all branches)
